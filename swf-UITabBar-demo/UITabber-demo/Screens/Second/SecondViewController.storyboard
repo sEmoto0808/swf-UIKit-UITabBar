@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WyX-1z-orH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SecondViewController-->
+        <scene sceneID="0ph-h2-DaC">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" id="878-G2-gAS" customClass="SecondViewController" customModule="UITabber_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KB8-Q8-h6C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMI-uo-d20">
+                                <rect key="frame" x="0.0" y="20" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="mgs-Wq-R7q"/>
+                                    <tabBarItem systemItem="more" id="7A0-rV-arW"/>
+                                </items>
+                            </tabBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHR-Nh-x5v">
+                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uHR-Nh-x5v" firstAttribute="top" secondItem="cMI-uo-d20" secondAttribute="bottom" id="2za-QB-URf"/>
+                            <constraint firstItem="cMI-uo-d20" firstAttribute="top" secondItem="P2R-gC-jy1" secondAttribute="top" id="CeJ-sH-46v"/>
+                            <constraint firstItem="uHR-Nh-x5v" firstAttribute="bottom" secondItem="P2R-gC-jy1" secondAttribute="bottom" id="RIA-Th-iss"/>
+                            <constraint firstItem="uHR-Nh-x5v" firstAttribute="trailing" secondItem="P2R-gC-jy1" secondAttribute="trailing" id="RNL-vD-X2h"/>
+                            <constraint firstItem="cMI-uo-d20" firstAttribute="trailing" secondItem="P2R-gC-jy1" secondAttribute="trailing" id="hDF-TC-ZSA"/>
+                            <constraint firstItem="uHR-Nh-x5v" firstAttribute="leading" secondItem="P2R-gC-jy1" secondAttribute="leading" id="r3v-PO-tiO"/>
+                            <constraint firstItem="cMI-uo-d20" firstAttribute="leading" secondItem="P2R-gC-jy1" secondAttribute="leading" id="tni-zm-Dhy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P2R-gC-jy1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yXq-ZO-slz"/>
+                    <connections>
+                        <outlet property="secondContainerView" destination="uHR-Nh-x5v" id="qsl-lu-VeE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJP-Zm-b98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991.20000000000005" y="165.06746626686657"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FsO-Ze-mVH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keD-OP-BU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WyX-1z-orH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wFf-Vh-rg0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="878-G2-gAS" kind="relationship" relationship="rootViewController" id="HdT-E0-StW"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="52" y="165.96701649175412"/>
+        </scene>
+    </scenes>
+</document>
